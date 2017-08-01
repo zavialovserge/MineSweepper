@@ -1,4 +1,5 @@
 ﻿using GalaSoft.MvvmLight;
+using Minesweeper.Properties;
 using System;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -24,7 +25,7 @@ namespace Minesweeper.ViewModel
             this.viewModel = ViewModel;
             cells = new ObservableCollection<Cell>();
             //TODO MAKE IT GLOBAL
-            int globalCount = 36;
+            double globalCount = Math.Pow(Settings.Default.Number_of_cells,2);
             for (int i = 0; i < globalCount; i++)
             {
                 cells.Add(new Cell(this));

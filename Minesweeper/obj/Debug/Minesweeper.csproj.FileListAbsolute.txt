@@ -27,4 +27,3 @@ C:\Users\zavia\Desktop\MoneySaver\Wpf\Minesweeper\Minesweeper\obj\Debug\Mineswee
 C:\Users\zavia\Desktop\MoneySaver\Wpf\Minesweeper\Minesweeper\obj\Debug\Minesweeper.csproj.GenerateResource.Cache
 C:\Users\zavia\Desktop\MoneySaver\Wpf\Minesweeper\Minesweeper\obj\Debug\Minesweeper.exe
 C:\Users\zavia\Desktop\MoneySaver\Wpf\Minesweeper\Minesweeper\obj\Debug\Minesweeper.pdb
-C:\Users\zavia\Desktop\MoneySaver\Wpf\Minesweeper\Minesweeper\obj\Debug\Minesweeper.csprojResolveAssemblyReference.cache

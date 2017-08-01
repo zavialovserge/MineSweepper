@@ -35,11 +35,24 @@ namespace Minesweeper.ViewModel
 
             }
         }
+        private SettingsViewModel settings;
+
+        public SettingsViewModel Settings
+        {
+            get { return settings; }
+            set
+            {
+                settings = value;
+                RaisePropertyChanged(nameof(Settings));
+
+            }
+        }
         /// <summary>
         /// Initializes a new instance of the MainViewModel class.
         /// </summary>
         public MainViewModel()
         {
+            Settings = new SettingsViewModel();
             Game = new Game(this);           
             newGame = new RelayCommand(StartNewGame);
         }

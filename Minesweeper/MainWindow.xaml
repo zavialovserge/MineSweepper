@@ -49,8 +49,14 @@
             <Button Height="100" 
                     Width="100"
                     VerticalAlignment="Center"
-                    HorizontalAlignment="Center"/>
-            
+                    HorizontalAlignment="Center"
+                    >
+                <Button.Content>
+                    <Image Source="C:\Users\zavia\Desktop\MoneySaver\Wpf\Minesweeper\Minesweeper\Resource\Image\gear.png"/>
+                </Button.Content>
+            </Button>
+            <TextBox/>
+
         </WrapPanel>
         <ItemsControl Grid.Row="1" ItemsSource="{Binding cells,Mode=OneWay,UpdateSourceTrigger=PropertyChanged}">
             <ItemsControl.ItemsPanel>

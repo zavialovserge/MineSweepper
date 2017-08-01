@@ -72,6 +72,7 @@
     </ApplicationDefinition>
     <Compile Include="ViewModel\Cell.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
+    <Compile Include="ViewModel\SettingsViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
     <Compile Include="ViewModel\Game.cs" />
     <Page Include="MainWindow.xaml">
@@ -135,5 +136,9 @@
     <Resource Include="Resource\Image\restart.png" />
     <Resource Include="Resource\Image\space.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\Image\gear.png" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
