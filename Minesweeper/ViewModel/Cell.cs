@@ -1,10 +1,5 @@
 ﻿using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.CommandWpf;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
 
 namespace Minesweeper.ViewModel
@@ -56,7 +51,6 @@ namespace Minesweeper.ViewModel
         public Cell(Game game)
         {
             this.Game = game;
-            Random rand = new Random();
             IsEnable = true;
             this.imageUri = @"C:\Users\zavia\Desktop\MoneySaver\Wpf\Minesweeper\Minesweeper\Resource\Image\space.png";
             leftClick = new RelayCommand(ChangeUri,()=>!flag);
@@ -69,7 +63,7 @@ namespace Minesweeper.ViewModel
             flag = flag ? false : true;
             this.imageUri = flag ? @"C:\Users\zavia\Desktop\MoneySaver\Wpf\Minesweeper\Minesweeper\Resource\Image\flag.png"
                                  : @"C:\Users\zavia\Desktop\MoneySaver\Wpf\Minesweeper\Minesweeper\Resource\Image\space.png";
-            if (flag)
+            if (flag && Game.BombCounter!=0)
             {
                 Game.BombCounter--;
             }

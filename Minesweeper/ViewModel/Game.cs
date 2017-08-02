@@ -1,8 +1,10 @@
 ﻿using GalaSoft.MvvmLight;
+using GalaSoft.MvvmLight.CommandWpf;
 using Minesweeper.Properties;
 using System;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Windows.Input;
 
 namespace Minesweeper.ViewModel
 {
@@ -33,8 +35,27 @@ namespace Minesweeper.ViewModel
             AddBomb();
             CountOfNearBombs();
             bombCounter= cells.Where(x => x.IsBomb).Count();
+            showSettings = new RelayCommand(ShowSetting);
+            isEnable = true;
+            
+
+        }
+        private bool isEnable;
+
+        public bool IsEnable
+        {
+            get { return isEnable; }
+            set { isEnable = value; }
+        }
+        
+        private void ShowSetting()
+        {
+            IsEnable = false;
+            viewModel.Settings.Visible = "Visible";
         }
 
+        public ICommand ShowSettings => showSettings;
+        private RelayCommand showSettings;
         private void CountOfNearBombs()
         {
             int lenght = (int)Math.Sqrt(cells.Count) + 2;
@@ -90,8 +111,19 @@ namespace Minesweeper.ViewModel
 
         private void AddBomb()
         {
-            //TODO GLOBAL variable defined by difficult
-            double ver = 0.3;
+            double ver = 0;
+            switch (Settings.Default.Difficult)
+            {
+                case "Easy":
+                    ver = Settings.Default.Easy;
+                    break;
+                case "Medium":
+                    ver = Settings.Default.Medium;
+                    break;
+                case "Hard":
+                    ver = Settings.Default.Hard;
+                    break;
+            }
             int countOfBombs = (int)(ver * cells.Count);
             int index = 0;
             Random rand = new Random();

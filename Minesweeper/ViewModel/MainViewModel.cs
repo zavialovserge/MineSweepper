@@ -52,7 +52,7 @@ namespace Minesweeper.ViewModel
         /// </summary>
         public MainViewModel()
         {
-            Settings = new SettingsViewModel();
+            Settings = new SettingsViewModel(this);
             Game = new Game(this);           
             newGame = new RelayCommand(StartNewGame);
         }

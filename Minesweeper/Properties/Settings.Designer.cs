@@ -46,5 +46,41 @@ namespace Minesweeper.Properties {
                 this["Number_of_cells"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0.15")]
+        public double Easy {
+            get {
+                return ((double)(this["Easy"]));
+            }
+            set {
+                this["Easy"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double Hard {
+            get {
+                return ((double)(this["Hard"]));
+            }
+            set {
+                this["Hard"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0.3")]
+        public double Medium {
+            get {
+                return ((double)(this["Medium"]));
+            }
+            set {
+                this["Medium"] = value;
+            }
+        }
     }
 }

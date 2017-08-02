@@ -22,11 +22,12 @@ namespace Minesweeper.ViewModel
           
 
             SimpleIoc.Default.Register<MainViewModel>();
-            
+            SimpleIoc.Default.Register<SettingsViewModel>();
+
         }
 
         public MainViewModel Main => ServiceLocator.Current.GetInstance<MainViewModel>();
-        
+        public SettingsViewModel Setting => ServiceLocator.Current.GetInstance<SettingsViewModel>();
         public static void Cleanup()
         {
             

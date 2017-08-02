@@ -14,5 +14,10 @@
        
 
     </Style>
-
+    <Storyboard  x:Key="ShowSettingMenu">
+        <ThicknessAnimation Storyboard.TargetProperty="Margin" From="-150,0,0,0" To="0,0,0,0" DecelerationRatio=".9" Duration="0:0:1" />
+    </Storyboard>
+    <Storyboard x:Key="HideSettingMenu">
+        <ThicknessAnimation Storyboard.TargetProperty="Margin" From="-150,0,0,0" To="0,0,0,0" DecelerationRatio=".9" Duration="0:0:1" />
+    </Storyboard>
 </ResourceDictionary>

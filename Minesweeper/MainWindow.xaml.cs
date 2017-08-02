@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using System.Windows.Media.Animation;
 
 namespace Minesweeper
 {
@@ -11,6 +12,14 @@ namespace Minesweeper
         {
             InitializeComponent();
 
+        }
+
+        private void SettingsControl_Loaded(object sender, RoutedEventArgs e)
+        {
+            Storyboard sb = new Storyboard();
+            sb.Begin();
+
+              
         }
     }
 }
