@@ -15,6 +15,7 @@ C:\Users\zavia\Desktop\MoneySaver\Wpf\Minesweeper\Minesweeper\bin\Debug\GalaSoft
 C:\Users\zavia\Desktop\MoneySaver\Wpf\Minesweeper\Minesweeper\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
 C:\Users\zavia\Desktop\MoneySaver\Wpf\Minesweeper\Minesweeper\bin\Debug\Microsoft.Practices.ServiceLocation.xml
 C:\Users\zavia\Desktop\MoneySaver\Wpf\Minesweeper\Minesweeper\obj\Debug\MainWindow.g.cs
+C:\Users\zavia\Desktop\MoneySaver\Wpf\Minesweeper\Minesweeper\obj\Debug\View\SettingView.g.cs
 C:\Users\zavia\Desktop\MoneySaver\Wpf\Minesweeper\Minesweeper\obj\Debug\App.g.cs
 C:\Users\zavia\Desktop\MoneySaver\Wpf\Minesweeper\Minesweeper\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\zavia\Desktop\MoneySaver\Wpf\Minesweeper\Minesweeper\obj\Debug\Minesweeper_MarkupCompile.cache
@@ -22,11 +23,9 @@ C:\Users\zavia\Desktop\MoneySaver\Wpf\Minesweeper\Minesweeper\obj\Debug\Mineswee
 C:\Users\zavia\Desktop\MoneySaver\Wpf\Minesweeper\Minesweeper\obj\Debug\App.baml
 C:\Users\zavia\Desktop\MoneySaver\Wpf\Minesweeper\Minesweeper\obj\Debug\MainWindow.baml
 C:\Users\zavia\Desktop\MoneySaver\Wpf\Minesweeper\Minesweeper\obj\Debug\Resource\Resource.baml
+C:\Users\zavia\Desktop\MoneySaver\Wpf\Minesweeper\Minesweeper\obj\Debug\View\SettingView.baml
 C:\Users\zavia\Desktop\MoneySaver\Wpf\Minesweeper\Minesweeper\obj\Debug\Minesweeper.g.resources
 C:\Users\zavia\Desktop\MoneySaver\Wpf\Minesweeper\Minesweeper\obj\Debug\Minesweeper.Properties.Resources.resources
 C:\Users\zavia\Desktop\MoneySaver\Wpf\Minesweeper\Minesweeper\obj\Debug\Minesweeper.csproj.GenerateResource.Cache
 C:\Users\zavia\Desktop\MoneySaver\Wpf\Minesweeper\Minesweeper\obj\Debug\Minesweeper.exe
 C:\Users\zavia\Desktop\MoneySaver\Wpf\Minesweeper\Minesweeper\obj\Debug\Minesweeper.pdb
-C:\Users\zavia\Desktop\MoneySaver\Wpf\Minesweeper\Minesweeper\obj\Debug\View\SettingView.g.cs
-C:\Users\zavia\Desktop\MoneySaver\Wpf\Minesweeper\Minesweeper\obj\Debug\View\SettingView.baml
-C:\Users\zavia\Desktop\MoneySaver\Wpf\Minesweeper\Minesweeper\obj\Debug\Minesweeper.csprojResolveAssemblyReference.cache

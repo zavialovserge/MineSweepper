@@ -57,7 +57,7 @@ namespace Minesweeper.ViewModel
             newGame = new RelayCommand(StartNewGame);
         }
 
-        private void StartNewGame()
+        public void StartNewGame()
         {
             Game = new Game(this);
             RaisePropertyChanged(nameof(Game));
@@ -65,7 +65,7 @@ namespace Minesweeper.ViewModel
         }
 
         public ICommand NewGame => newGame;
-        private RelayCommand newGame;
+        public RelayCommand newGame;
        
     }
 }

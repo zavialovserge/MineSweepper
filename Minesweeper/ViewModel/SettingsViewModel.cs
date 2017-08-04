@@ -73,7 +73,9 @@ namespace Minesweeper.ViewModel
             Settings.Default.Save();
            
             viewModel.Settings.Visible = "Collapsed";
-
+            object cork = new object();
+            viewModel.StartNewGame();
+            RaisePropertyChanged("Game");
             
         }
         private void NewSetting()
@@ -83,6 +85,9 @@ namespace Minesweeper.ViewModel
             Settings.Default.Save();
             viewModel.Settings.Visible = "Collapsed";
             
+            viewModel.StartNewGame();
+            RaisePropertyChanged("Game");
+
         }
 
         public ICommand ChangeSettings => changeSettings;

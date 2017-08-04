@@ -7,7 +7,6 @@
              xmlns:vm="clr-namespace:Minesweeper.ViewModel"
              mc:Ignorable="d" 
              d:DesignHeight="100" d:DesignWidth="200"
-             Loaded="SettingView_Loaded"
              Background="LightGray">
     <UserControl.DataContext>
     <vm:ViewModelLocator/>

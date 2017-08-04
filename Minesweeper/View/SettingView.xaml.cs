@@ -18,14 +18,7 @@ namespace Minesweeper.View
         }
 
 
-        private void SettingView_Loaded(object sender, RoutedEventArgs e)
-        {
-            viewModel = ((ViewModelLocator)DataContext).Setting;
-            //DoubleAnimation animation = new DoubleAnimation();
-            //animation.From = 0;
-            //animation.To = 100;
-            //animation.
-        }
+      
 
        
 

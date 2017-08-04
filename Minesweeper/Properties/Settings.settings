@@ -6,16 +6,19 @@
       <Value Profile="(Default)">Easy</Value>
     </Setting>
     <Setting Name="Number_of_cells" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">6</Value>
+      <Value Profile="(Default)">5</Value>
     </Setting>
     <Setting Name="Easy" Type="System.Double" Scope="User">
       <Value Profile="(Default)">0.15</Value>
     </Setting>
     <Setting Name="Hard" Type="System.Double" Scope="User">
-      <Value Profile="(Default)">0</Value>
+      <Value Profile="(Default)">0.45</Value>
     </Setting>
     <Setting Name="Medium" Type="System.Double" Scope="User">
       <Value Profile="(Default)">0.3</Value>
+    </Setting>
+    <Setting Name="UserRecord" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
     </Setting>
   </Settings>
 </SettingsFile>

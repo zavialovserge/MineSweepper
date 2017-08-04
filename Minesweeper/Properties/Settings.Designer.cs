@@ -37,7 +37,7 @@ namespace Minesweeper.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("6")]
+        [global::System.Configuration.DefaultSettingValueAttribute("5")]
         public int Number_of_cells {
             get {
                 return ((int)(this["Number_of_cells"]));
@@ -61,7 +61,7 @@ namespace Minesweeper.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        [global::System.Configuration.DefaultSettingValueAttribute("0.45")]
         public double Hard {
             get {
                 return ((double)(this["Hard"]));
@@ -80,6 +80,18 @@ namespace Minesweeper.Properties {
             }
             set {
                 this["Medium"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string UserRecord {
+            get {
+                return ((string)(this["UserRecord"]));
+            }
+            set {
+                this["UserRecord"] = value;
             }
         }
     }

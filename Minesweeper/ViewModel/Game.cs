@@ -4,7 +4,9 @@ using Minesweeper.Properties;
 using System;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Timers;
 using System.Windows.Input;
+using System.Windows.Threading;
 
 namespace Minesweeper.ViewModel
 {
@@ -21,14 +23,47 @@ namespace Minesweeper.ViewModel
                 RaisePropertyChanged();
             }
         }
+
+       
+
         public MainViewModel viewModel { get; set; }
+        private Timer timer;
+
+        public Timer Timer
+        {
+            get { return timer; }
+            set { timer = value; }
+        }
+        private string Time;
+
+        public string time
+        {
+            get { return Time; }
+            set
+            {
+                Time = value;
+                RaisePropertyChanged();
+            }
+        }
+        private int globalCount;
+
+        public int GlobalCount
+        {
+            get { return globalCount; }
+            set
+            {
+                globalCount = Settings.Default.Number_of_cells;
+                RaisePropertyChanged();
+            }
+        }
+
         public Game(MainViewModel ViewModel)
         {
             this.viewModel = ViewModel;
             cells = new ObservableCollection<Cell>();
             //TODO MAKE IT GLOBAL
-            double globalCount = Math.Pow(Settings.Default.Number_of_cells,2);
-            for (int i = 0; i < globalCount; i++)
+            int GlobalCountPow = (int)Math.Pow(Settings.Default.Number_of_cells,2);
+            for (int i = 0; i < GlobalCountPow; i++)
             {
                 cells.Add(new Cell(this));
             }
@@ -36,8 +71,10 @@ namespace Minesweeper.ViewModel
             CountOfNearBombs();
             bombCounter= cells.Where(x => x.IsBomb).Count();
             showSettings = new RelayCommand(ShowSetting);
-            isEnable = true;
-            
+            IsEnable = true;
+           
+            Time = "00:00:00";
+
 
         }
         private bool isEnable;

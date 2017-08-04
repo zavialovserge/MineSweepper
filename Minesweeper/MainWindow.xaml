@@ -7,7 +7,7 @@
         xmlns:local="clr-namespace:Minesweeper"
         xmlns:view="clr-namespace:Minesweeper.View"
         mc:Ignorable="d"
-        Title="MainWindow" Height="800" Width="800">
+        Title="MainWindow" Height="800" Width="800" >
     
     <Window.DataContext>
         <viewModel:ViewModelLocator/>
@@ -38,24 +38,18 @@
                      Height="300"
                      HorizontalAlignment="Left"
                      VerticalAlignment="Top"
-                     x:Name="SettingsControl"
-                     Loaded="SettingsControl_Loaded">
+                     x:Name="SettingsControl">
             
                 <view:SettingView />
            
         </UserControl>
         
-        <WrapPanel Orientation="Horizontal" Grid.Column="0" Grid.ColumnSpan="2" >
-            <Button Height="100" 
-                    Width="100"
-                    VerticalAlignment="Center"
-                    HorizontalAlignment="Center"
-                    Command="{Binding ShowSettings}"
-                    >
-                <Button.Content>
-                    <Image Source="C:\Users\zavia\Desktop\MoneySaver\Wpf\Minesweeper\Minesweeper\Resource\Image\gear.png"/>
-                </Button.Content>
-            </Button>
+        <Grid  Grid.Column="0" Grid.ColumnSpan="2" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.3*"/>
+                <ColumnDefinition />
+                <ColumnDefinition Width="0.3*"/>
+            </Grid.ColumnDefinitions>
             <TextBox Text="{Binding BombCounter,Mode=OneWay,UpdateSourceTrigger=PropertyChanged}"
                        HorizontalAlignment="Center"
                        VerticalAlignment="Center"
@@ -67,7 +61,22 @@
                        Height="100" 
                        Width="100"
                        IsEnabled="True"/>
-            <Button Height="100" 
+            
+            <StackPanel Grid.Column="1"
+                        Orientation="Horizontal"
+                        HorizontalAlignment="Center">
+                <Button Height="100" 
+                    Width="100"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Command="{Binding ShowSettings}"
+                    >
+                    <Button.Content>
+                        <Image Source="C:\Users\zavia\Desktop\MoneySaver\Wpf\Minesweeper\Minesweeper\Resource\Image\gear.png"/>
+                    </Button.Content>
+                </Button>
+
+                <Button Height="100" 
                     Width="100"
                     VerticalAlignment="Center"
                     Command="{Binding viewModel.NewGame,Mode=OneWay,UpdateSourceTrigger=PropertyChanged}">
@@ -75,15 +84,27 @@
                     <Image Source="C:\Users\zavia\Desktop\MoneySaver\Wpf\Minesweeper\Minesweeper\Resource\Image\restart.png"/>
                 </Button.Content>
             </Button>
-           
-            <TextBox/>
+            </StackPanel>
+            <TextBox   Grid.Column="2"
+                       Text="{Binding time,Mode=OneWay,UpdateSourceTrigger=PropertyChanged}"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       HorizontalContentAlignment="Center"  
+                       VerticalContentAlignment="Center"
+                       Background="Black"
+                       Foreground="Red"
+                       FontSize="25"
+                       Height="100" 
+                       Width="100"
+                       IsEnabled="True"
+                       />
 
-        </WrapPanel>
-        <ItemsControl Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" ItemsSource="{Binding cells,Mode=OneWay,UpdateSourceTrigger=PropertyChanged}">
+        </Grid>
+        <ItemsControl  Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" ItemsSource="{Binding cells,Mode=OneWay,UpdateSourceTrigger=PropertyChanged}">
             <ItemsControl.ItemsPanel>
                 <ItemsPanelTemplate>
-                    <UniformGrid Rows="6"
-                                 Columns="6">
+                    <UniformGrid Rows="{Binding GlobalCount,Mode=OneWay,UpdateSourceTrigger=PropertyChanged}"
+                                 Columns="{Binding GlobalCount,Mode=OneWay,UpdateSourceTrigger=PropertyChanged}">
                     </UniformGrid>
                 </ItemsPanelTemplate>
             </ItemsControl.ItemsPanel>

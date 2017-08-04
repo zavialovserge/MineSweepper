@@ -1,4 +1,6 @@
-﻿using System.Windows;
+﻿using Minesweeper.ViewModel;
+using System;
+using System.Windows;
 using System.Windows.Media.Animation;
 
 namespace Minesweeper
@@ -8,18 +10,11 @@ namespace Minesweeper
     /// </summary>
     public partial class MainWindow : Window
     {
+
         public MainWindow()
         {
             InitializeComponent();
-
         }
-
-        private void SettingsControl_Loaded(object sender, RoutedEventArgs e)
-        {
-            Storyboard sb = new Storyboard();
-            sb.Begin();
-
-              
-        }
+       
     }
 }
